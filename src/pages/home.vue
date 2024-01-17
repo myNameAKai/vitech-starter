@@ -3,12 +3,12 @@
         hello word
     </div>
     <button class="... ring-2 ring-blue-500">
-        Create account
+        Create account{{ msg }}
     </button>
 </template>
 
 <script setup lang="ts">
-
+const msg = ref(0)
 </script>
 
 <style scoped></style>
