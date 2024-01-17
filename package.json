@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.58.3",
+    "@vueuse/core": "^10.7.2",
     "pinia": "^2.1.7",
     "reset-css": "^5.0.2",
     "vue": "^3.3.11",

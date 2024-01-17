@@ -5,10 +5,16 @@
     <button class="... ring-2 ring-blue-500">
         Create account{{ msg }}
     </button>
+    <div ref="target">
+        {{ x }}{{ y }}
+    </div>
 </template>
 
 <script setup lang="ts">
 const msg = ref(0)
+const target = ref(null)
+
+const { x, y, isOutside } = useMouseInElement(target)
 </script>
 
 <style scoped></style>
