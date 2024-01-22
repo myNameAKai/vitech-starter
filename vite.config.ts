@@ -8,6 +8,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 // 如果使用了AutoImport vue-router 需要从 VueRouterAutoImports引入
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 
+// 自动导入组件
+import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
@@ -35,6 +37,13 @@ export default defineConfig({
         VueRouterAutoImports,
         '@vueuse/core'
       ]
+    }),
+    Components({
+      /* options */
+      // 允许子目录作为组件的命名空间前缀
+      directoryAsNamespace: true,
+      // 省略相同的前缀
+      collapseSamePrefixes: true
     })
   ],
   resolve: {

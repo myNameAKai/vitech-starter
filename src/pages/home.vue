@@ -8,6 +8,8 @@
     <div ref="target">
         {{ x }}{{ y }}
     </div>
+    <HelloWorld msg="auto-vue-components"></HelloWorld>
+    <UserComponents></UserComponents>
 </template>
 
 <script setup lang="ts">
