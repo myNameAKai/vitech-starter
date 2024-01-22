@@ -12,6 +12,7 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -43,7 +44,8 @@ export default defineConfig({
       // 允许子目录作为组件的命名空间前缀
       directoryAsNamespace: true,
       // 省略相同的前缀
-      collapseSamePrefixes: true
+      collapseSamePrefixes: true,
+      resolvers: [ElementPlusResolver()]
     })
   ],
   resolve: {

@@ -10,6 +10,7 @@
     </div>
     <HelloWorld msg="auto-vue-components"></HelloWorld>
     <UserComponents></UserComponents>
+    <el-tag>测试</el-tag>
 </template>
 
 <script setup lang="ts">
