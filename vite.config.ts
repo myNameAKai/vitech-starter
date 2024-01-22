@@ -13,6 +13,9 @@ import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
+// 布局
+import Layouts from 'vite-plugin-vue-layouts'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -46,6 +49,11 @@ export default defineConfig({
       // 省略相同的前缀
       collapseSamePrefixes: true,
       resolvers: [ElementPlusResolver()]
+    }),
+    Layouts({
+      // 路径
+      layoutsDirs: 'src/layouts',
+      defaultLayout: 'default'
     })
   ],
   resolve: {
