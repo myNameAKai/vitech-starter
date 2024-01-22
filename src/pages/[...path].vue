@@ -1,6 +1,6 @@
 <template>
     <div>
-        about
+        NOT FOUND
     </div>
 </template>
 
@@ -11,6 +11,5 @@
 <style scoped></style>
 <route lang="yaml">
     meta:
-      layout: default
-    </route>
-    
+     layout: 404
+</route>
