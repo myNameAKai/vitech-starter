@@ -16,6 +16,9 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // 布局
 import Layouts from 'vite-plugin-vue-layouts'
+
+// PWA
+import { VitePWA } from 'vite-plugin-pwa'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -54,6 +57,30 @@ export default defineConfig({
       // 路径
       layoutsDirs: 'src/layouts',
       defaultLayout: 'default'
+    }),
+    VitePWA({
+      manifest: {
+        name: 'Vite App',
+        short_name: 'Vite App',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      }
+      // registerType: 'autoUpdate',
+      // workbox: {
+      //   clientsClaim: true,
+      //   skipWaiting: true
+      // }
     })
   ],
   resolve: {

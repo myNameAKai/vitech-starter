@@ -7,7 +7,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <header>
 
     <HelloWorld msg="You did it!" />
-
+    nihaoxxx
 
   </header>
 
